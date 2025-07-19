@@ -2,20 +2,21 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>EntregaFácil JuáPetro</title>
+  <title>Chat Privado</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>EntregaFácil JuáPetro</h1>
-    <input id="entregaInput" placeholder="Nova entrega (ex: Centro x Centro)">
-    <button onclick="enviarEntrega()">Enviar Entrega</button>
-    <ul id="entregas"></ul>
+  <div id="chatHeader">Chat com o Logista</div>
+  <div id="chatMessages" class="messages"></div>
+  <div class="input-area">
+    <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+    <input type="file" id="fileInput" accept="image/*" onchange="sendImage(event)">
+    <button onclick="sendMessage()">Enviar</button>
   </div>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script src="firebase.js"></script>
-  <script src="script.js"></script>
+  <script src="chat.js"></script>
 </body>
 </html>
